@@ -1,0 +1,14 @@
+<!-- templates/users.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  {% for user in users %}
+    <li>{{user.id}}</li>
+    <p>{{user.email}}</p>
+    <p>{{user.name}}</p>
+    <br />
+    {% endfor %}
+</h1>
+{% endblock %}
